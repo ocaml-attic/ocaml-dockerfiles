@@ -4,7 +4,7 @@ MAINTAINER Anil Madhavapeddy <anil@recoil.org>
 RUN echo 'Acquire::Retries "5";' > /etc/apt/apt.conf.d/mirror-retry && \
   apt-get -y update && \
   DEBIAN_FRONTEND=noninteractive apt-get -y upgrade && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install sudo pkg-config git build-essential m4 software-properties-common unzip curl libx11-dev && \
+  DEBIAN_FRONTEND=noninteractive apt-get -y install sudo pkg-config git build-essential m4 software-properties-common unzip curl libx11-dev rsync && \
   apt-get -y update && \
   DEBIAN_FRONTEND=noninteractive apt-get -y upgrade && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install ocaml ocaml-native-compilers camlp4-extra
+  DEBIAN_FRONTEND=noninteractive apt-get -y install ocaml ocaml-native-compilers camlp4-extra rsync
